@@ -26,6 +26,7 @@ class CircleTest(unittest.TestCase):
             with self.assertRaises(ValueError):
                 c1 = Circle(i)
                 c2 = Circle(i)
+                c1.add_area(c2)
 
 
 

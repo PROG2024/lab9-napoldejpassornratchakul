@@ -9,7 +9,11 @@ class Circle:
         
         :param radius: radius of the circle, may be zero.
         :raises ValueError: if radius is negative.
-        """
+        >>> radius < 0
+        Traceback (most recent call last):
+            ...
+        ValueError: radius must be non-negative
+    """
         if radius < 0:
             raise ValueError("radius must be non-negative")
         self.radius = radius
@@ -23,7 +27,9 @@ class Circle:
         >>> c1 = Circle(4)
         >>> result = c.add_area(c1)
         >>> r_radius = result.get_radius()
-        >>> assert int(r_radius) == 5
+        5
+
+
         """
 
         r1 = self.get_radius()
