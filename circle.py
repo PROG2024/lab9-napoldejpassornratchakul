@@ -23,7 +23,7 @@ class Circle:
         >>> c = Circle(3)
         >>> c1 = Circle(4)
         >>> result = c.add_area(c1)
-        >>> r_radius = result.get_radius()
+        >>> result.get_radius()
         5.0
 
         >>> Circle(-1)
