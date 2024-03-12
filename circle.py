@@ -24,7 +24,7 @@ class Circle:
         >>> c1 = Circle(4)
         >>> result = c.add_area(c1)
         >>> r_radius = result.get_radius()
-        5
+        5.0
 
         >>> Circle(-1)
         Traceback (most recent call last):
