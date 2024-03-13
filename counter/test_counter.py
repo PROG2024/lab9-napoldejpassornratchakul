@@ -13,20 +13,22 @@ class CounterTest(unittest.TestCase):
 
     def setUp(self):
         self.a = Counter()
-        self.b = Counter()
-
 
     def test_is_singleton(self):
+        self.b = Counter()
         self.a.increment()
         self.assertEquals(self.a, self.b)
 
 
-    # def test_is_reset(self):
-    #     self.a.increment()
-    #     c = Counter()
-    #     print(c)
+    def test_is_reset(self):
+        self.a.increment()
+        self.b = Counter()
+        self.assertEquals(self.a,self.b)
+
+
 
     def test_is_same_instance(self):
+        self.b = Counter()
         self.assertIsInstance(self.a , Counter)
         self.assertIsInstance(self.b, Counter)
         self.assertEquals(self.a, self.b)

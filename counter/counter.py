@@ -16,12 +16,15 @@ class Counter:
     def __new__(cls, *args, **kwargs):
         if cls.__instance is not None:
             return cls.__instance
-        cls.__instance = super().__new__(cls,*args,**kwargs)
-        return cls.__instance
+        else:
+            cls.__instance = super().__new__(cls,*args,**kwargs)
+            cls.__count = 0
+            return cls.__instance
 
 
-    def __init__(self):
-        self.__count = 0
+    # def __init__(self):
+    #     self.__count = 0
+
 
     @property
     def count(self):
