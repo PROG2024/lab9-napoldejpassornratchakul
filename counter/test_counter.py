@@ -7,3 +7,40 @@
 
    You can use pytest or unittest.
 """
+from counter import Counter
+import unittest
+class CounterTest(unittest.TestCase):
+
+    def setUp(self):
+        self.a = Counter()
+        self.b = Counter()
+
+
+    def test_is_singleton(self):
+        self.a.increment()
+        self.assertEquals(self.a, self.b)
+
+
+    # def test_is_reset(self):
+    #     self.a.increment()
+    #     c = Counter()
+    #     print(c)
+
+    def test_is_same_instance(self):
+        self.assertIsInstance(self.a , Counter)
+        self.assertIsInstance(self.b, Counter)
+        self.assertEquals(self.a, self.b)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
